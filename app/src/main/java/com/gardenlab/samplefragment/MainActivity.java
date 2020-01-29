@@ -1,6 +1,7 @@
 package com.gardenlab.samplefragment;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
@@ -19,9 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void onFragmentChanged(int index) {
         if(index==0) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, menuFragment).commit();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.container,menuFragment);
+            transaction.commit();
         } else if(index==1) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, mainFragment).commit();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.container,mainFragment);
+            transaction.commit();
         }
     }
 }

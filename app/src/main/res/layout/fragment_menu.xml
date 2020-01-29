@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#ffffff">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -14,6 +13,7 @@
         android:textSize="30sp"/>
 
     <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="메인 화면으로"
